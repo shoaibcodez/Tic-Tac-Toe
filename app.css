@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Raleway:wght@800&family=Roboto:wght@100;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital@1&family=Montserrat:wght@100&family=Raleway:wght@800&family=Roboto:wght@100;500&family=Secular+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(to left, rgb(10, 200, 248), rgb(92, 3, 151));
+}
+
+nav {
+    /* background: linear-gradient(45deg, red, blue); */
+    background-color: rgb(0, 0, 0);
+    color: white;
+    height: 80px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+.gameContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.container {
+    font-family: 'Roboto', sans-serif;
+    display: grid;
+    grid-template-rows: repeat(3, 10vw);
+    grid-template-columns: repeat(3, 10vw);
+}
+
+.box {
+    border: 2px solid black;
+    font-size: 8vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box:hover {
+    background-color: rgb(93, 130, 252);
+}
+
+.gameinfo {
+    padding: 0px 40px;
+    font-family: 'Secular One', sans-serif;
+}
+
+.gameinfo h1 {
+    font-size: 4rem;
+}
+
+/* .imgbox {
+    margin-top: 40px;
+}
+
+.imgbox img {
+    width: 0px;
+    transition: width 1s ease-in-out;
+} */
+
+.bl-0 {
+    border-left: 0;
+}
+
+.br-0 {
+    border-right: 0;
+}
+
+.bt-0 {
+    border-top: 0;
+}
+
+.bb-0 {
+    border-bottom: 0;
+}
+
+#reset {
+    margin: 15px 20px;
+    padding: 8px 20px;
+    cursor: pointer;
+    background-color: rgb(247, 20, 20);
+    border-radius: 10px;
+    font-family: 'Secular One', sans-serif;
+    font-size: 18px;
+}
+
+.turnInfo {
+    margin: 10px 10px 5px 10px;
+}
+
+.turnInfo span {
+    font-family: 'Secular One', sans-serif;
+    font-size: 23px;
+}
+
+/*ipads*/
+@media(min-width:500px) and (max-width:900px) {
+    .gameContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container {
+        /* font-family: 'Roboto', sans-serif;
+        display: grid; */
+        grid-template-rows: repeat(3, 15vw);
+        grid-template-columns: repeat(3, 15vw);
+    }
+
+    .gameinfo {
+        margin-top: 50px;
+    }
+
+    .gameinfo h1 {
+        font-size: 3rem;
+    }
+
+    .turnInfo {
+        text-align: center;
+    }
+
+    .info {
+        font-size: 2rem;
+        margin-right: 0.5rem;
+    }
+
+    #reset {
+        margin-left: 2.5rem;
+    }
+}
+
+/*mobiles*/
+@media(max-width:499px) {
+    .gameContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container {
+        /* font-family: 'Roboto', sans-serif;
+        display: grid; */
+        grid-template-rows: repeat(3, 20vw);
+        grid-template-columns: repeat(3, 20vw);
+    }
+
+    .turnInfo {
+        text-align: center;
+    }
+
+    .gameinfo {
+        margin-top: 25px;
+    }
+
+    .gameinfo h1 {
+        font-size: 2rem;
+        margin-left: 1.5rem;
+    }
+
+    .info {
+        font-size: 1rem;
+        margin-left: 0.5rem;
+    }
+
+    #reset {
+        margin-left: 2rem;
+    }
+}
